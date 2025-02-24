@@ -41,5 +41,5 @@ drawing_board.onkey(fun=turtle_pen_up,key="q")
 drawing_board.onkey(fun=turtle_pen_down,key="w")
 
 
-
+#lolo
 turtle.mainloop()
