@@ -25,9 +25,6 @@ print(p1)
 
 
 
-
-
-
 class Myclass:
     def __init__(self):
         print("Myclass initialized")
