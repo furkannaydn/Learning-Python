@@ -2,7 +2,7 @@ import threading  # Çoklu iş parçacığı (thread) işlemleri için
 import requests  # HTTP istekleri yapmak için
 import time  # Zaman ölçümleri yapmak için
 import asyncio  # Asenkron işlemleri yönetmek için
-import aiohttp  # Asenkron HTTP istekleri yapmak için
+import aiohttp  # type: ignore # Asenkron HTTP istekleri yapmak için
 
 
 def get_data_sync(urls):
@@ -98,4 +98,4 @@ urls = ["https://postman-echo.com/delay/3", ] * 10  # Test için 10 adet aynı U
 #get_data_sync(urls)  # Senkron istekleri çalıştır (yaklaşık 40 saniye sürer)
 #get_data_threading(urls)  # İş parçacıkları ile istekleri çalıştır (yaklaşık 3 saniye sürer)
 #asyncio.run(get_data_async_but_as_wrapper(urls))  # Asenkron sıralı istekleri çalıştır (yaklaşık 37 saniye sürer)
-#asyncio.run(get_data_async_concurrently(urls))  # Asenkron eş zamanlı istekleri çalıştır (yaklaşık 5 saniye sürer)
+asyncio.run(get_data_async_concurrently(urls))  # Asenkron eş zamanlı istekleri çalıştır (yaklaşık 5 saniye sürer)
