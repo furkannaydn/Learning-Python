@@ -11,6 +11,6 @@ if response.status_code == 200:  # Eğer istek başarılıysa
     print(f"Kilosu: {data['weight']}")  # Pokemon'un kilosunu yazdır
     print("Tipleri:")  # Pokemon'un tiplerini yazdır
     for t in data['types']:
-        print("-", t['type']['name'])
+        print("-", t['type']['name']) #Pokemon’un tipi (örneğin: elektrik, ateş, su)
 else:
     print("Pokemon bulunamadı!")  # Hatalı isim girilirse uyarı ver
